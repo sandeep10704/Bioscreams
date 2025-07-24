@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './Layout';
 
-import Products from './Pages/Products';
+
 import CategoriesLayout from './Components/Categories/CategoriesLayout';
 
 import OrderListLayout from './Components/Orders/OrderList/OrderListLayout'
@@ -16,12 +16,14 @@ import CategoriesFormLayout from './Components/Categories/CategoriesForm/Categor
 import CustomerFormLayout from "./Components/Customers/CustomerForm/CustomerFormLayout"
 import SingleCustomerLayout from "./Components/Customers/SingleCustomer/SingelCustomerLayout"
 import CustomerListLayout from './Components/Customers/CustomerList/CustomerListLayout';
-import CustomerLayout from "./Components/Customers/Custom
+import CustomerLayout from "./Components/Customers/CustomerLayout"
 import DashboardLayout from './Components/Dashboard/DashboardLayout';
+import ProductLayout from './Components/Products/ProductLayout'
 
 import ProductFormLayout from './Components/Products/ProductsForm/ProductFormLayout';
 import ProductListLayout from './Components/Products/ProductList/ProductListLayout';
-import SingleProductLayout from './Components/Products/SingleProduct/SingleProductLayout;
+import SingleProductLayout from './Components/Products/SingleProduct/SingleProductLayout';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -42,7 +44,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'products',
-        element: <Products />,
+        element: <ProductLayout />,
         children: [
           { index: true, element: <ProductListLayout /> },
           { path: 'form', element: <ProductFormLayout/> },
