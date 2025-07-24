@@ -5,12 +5,15 @@ import Layout from './Layout';
 import Dashboard from './Pages/Dashboard';
 import Orders from './Pages/Orders';
 import Products from './Pages/Products';
-import Categories from './Pages/Categories';
+import CategoriesLayout from './Components/Categories/CategoriesLayout';
 import Customers from './Pages/Customers';
 import OrderListLayout from './Components/Orders/OrderList/OrderListLayout'
 import OrderLayout from './Components/Orders/OrderLayout'
 import SingleOrderLayout from './Components/Orders/SingleOrder/SingleOrderLayout';
 import OrderFormLayout from './Components/Orders/OrderForm/OrderFormLayout';
+import CategoriesListLayout from './Components/Categories/CategoriesList/CategoriesListLayout';
+import SingleCategoryLayout from './Components/Categories/SingleCategory/SingleCategoryLayout';
+import CategoriesFormLayout from './Components/Categories/CategoriesForm/CategoriesFormLayout';
 
 const router = createBrowserRouter([
   {
@@ -41,11 +44,11 @@ const router = createBrowserRouter([
       },
       {
         path: 'categories',
-        element: <Categories />,
+        element: <CategoriesLayout />,
         children: [
-          { index: true, element: <CategoryList /> },
-          { path: 'add', element: <CategoryAdd /> },
-          { path: 'edit', element: <CategoryEdit /> },
+          { index: true, element: <CategoriesListLayout /> },
+          { path: ':id', element: <SingleCategoryLayout /> },
+          { path: 'form', element: <CategoriesFormLayout />},
         ],
       },
       {
