@@ -1,9 +1,10 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 
 const CustomerLayout = () => {
   return (
     <div>
-      Final Layout page
+      <Outlet />
     </div>
   )
 }

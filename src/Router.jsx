@@ -14,6 +14,10 @@ import OrderFormLayout from './Components/Orders/OrderForm/OrderFormLayout';
 import CategoriesListLayout from './Components/Categories/CategoriesList/CategoriesListLayout';
 import SingleCategoryLayout from './Components/Categories/SingleCategory/SingleCategoryLayout';
 import CategoriesFormLayout from './Components/Categories/CategoriesForm/CategoriesFormLayout';
+import CustomerFormLayout from "./Components/Customers/CustomerForm/CustomerFormLayout"
+import SingleCustomerLayout from "./Components/Customers/SingleCustomer/SingelCustomerLayout"
+import CustomerListLayout from './Components/Customers/CustomerList/CustomerListLayout';
+import CustomerLayout from "./Components/Customers/CustomerLayout"
 
 const router = createBrowserRouter([
   {
@@ -53,11 +57,11 @@ const router = createBrowserRouter([
       },
       {
         path: 'customers',
-        element: <Customers />,
+        element: <CustomerLayout />,
         children: [
-          { index: true, element: <CustomerList /> },
-          { path: 'profile', element: <CustomerProfile /> },
-          { path: 'support', element: <CustomerSupport /> },
+          { index: true, element: <CustomerListLayout /> },
+          { path: ':id', element: <SingleCustomerLayout /> },
+          { path: 'form', element: <CustomerFormLayout /> },
         ],
       },
     ],
