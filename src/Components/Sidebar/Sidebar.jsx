@@ -1,38 +1,32 @@
 import React from 'react';
-import { Drawer, List, ListItem, ListItemText, Toolbar } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-const drawerWidth = 200;
-
-const Sidebar = () => (
-  <Drawer
-    variant="permanent"
-    sx={{
-      width: drawerWidth,
-      flexShrink: 0,
-      [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
-    }}
-  >
-    <Toolbar />
-    <List>
-      <Box>hello</Box>
-      <ListItem button component={Link} to="/">
-        <ListItemText primary="Dashboard" />
-      </ListItem>
-      <ListItem button component={Link} to="/orders">
-        <ListItemText primary="Orders" />
-      </ListItem>
-      <ListItem button component={Link} to="/products">
-        <ListItemText primary="Products" />
-      </ListItem>
-      <ListItem button component={Link} to="/categories">
-        <ListItemText primary="Categories" />
-      </ListItem>
-      <ListItem button component={Link} to="/customers">
-        <ListItemText primary="Customers" />
-      </ListItem>
-    </List>
-  </Drawer>
-);
+const Sidebar = () => {
+  return (
+    <div className="w-64 h-screen bg-gray-800 text-white flex flex-col p-4">
+      <h1 className="text-xl font-bold mb-6">hello</h1>
+      <nav className="flex flex-col space-y-4">
+        <Link to="/" className="hover:bg-gray-700 px-4 py-2 rounded">
+          Dashboard
+        </Link>
+        <Link to="/orders" className="hover:bg-gray-700 px-4 py-2 rounded">
+          Orders
+        </Link>
+        <Link to="/products" className="hover:bg-gray-700 px-4 py-2 rounded">
+          Products
+        </Link>
+        <Link to="/categories" className="hover:bg-gray-700 px-4 py-2 rounded">
+          Categories
+        </Link>
+        <Link to="/customers" className="hover:bg-gray-700 px-4 py-2 rounded">
+          Customers
+        </Link>
+        <Link to="/pizzas" className="hover:bg-gray-700 px-4 py-2 rounded">
+          Pizzas
+        </Link>
+      </nav>
+    </div>
+  );
+};
 
 export default Sidebar;
