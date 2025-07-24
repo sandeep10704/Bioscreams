@@ -15,7 +15,7 @@ const Sidebar = ({isSidebarOpen}) => {
   const toggleDropdown = (id) => {
     setOpenDropdowns(prev => ({ ...prev, [id]: !prev[id] }));
   };
-  //if(!isSidebarOpen) return null;
+  // if(!isSidebarOpen) return null;
   const navConfig = [
     {
       id: 'dashboard',
