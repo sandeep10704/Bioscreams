@@ -1,13 +1,13 @@
 import React from 'react'
-import RevenueChartCard from './RevenueChartCard'; // Adjust path if needed
-import { FaDollarSign } from 'react-icons/fa'; // Example icon
+import RevenueChartCard from "./Components/RevenueChartCard"
+import { FaDollarSign } from 'react-icons/fa'; 
 
 const DashboardLayout = () => {
     const chartData = [
   { name: 'Jan', value: 30 },
   { name: 'Feb', value: 45 },
   { name: 'Mar', value: 40 },
-  { name: 'Apr', value: 66 }, // This point matches the "66" in the image
+  { name: 'Apr', value: 66 },
   { name: 'May', value: 80 },
   { name: 'Jun', value: 75 },
   { name: 'Jul', value: 90 },
