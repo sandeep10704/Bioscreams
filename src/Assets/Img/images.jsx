@@ -1,11 +1,11 @@
-import React from 'react'
+import Logo from "./Logo.jpg";
+import LoginImage from "./LoginImage.png";
+import SignUpImage from "./SignUpImage.png";
 
-const images = () => {
-  return (
-    <div>
-        gjh     
-    </div>
-  )
-}
+const Images = {
+  Logo,
+  LoginImage,
+  SignUpImage,
+};
 
-export default images
+export default Images;
