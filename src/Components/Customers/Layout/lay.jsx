@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Customers = () => {
+const lay = () => {
   return (
     <div>
-      
+      cehik
     </div>
   )
 }
 
-export default Customers
+export default lay

@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Footer = () => {
+const Table = () => {
   return (
     <div>
-      
+      euhd
     </div>
   )
 }
 
-export default Footer
+export default Table

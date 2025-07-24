@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Layout = () => {
+const Login = () => {
   return (
     <div>
-      oiejfol
+      edjcnlaswk
     </div>
   )
 }
 
-export default Layout
+export default Login
