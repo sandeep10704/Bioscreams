@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Footer from './Components/Footer/Footer';
 
+
 const Layout = () => {
   return (
     <div className="flex flex-col min-h-screen">
@@ -18,6 +19,8 @@ const Layout = () => {
       </div>
       <Footer />
     </div>
+
+    
   );
 };
 
