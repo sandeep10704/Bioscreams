@@ -7,15 +7,19 @@ import {
   Squares2X2Icon,
   UserGroupIcon,
 } from '@heroicons/react/24/outline';
-
 import Dropdown from './Dropdown';
-
-const Sidebar = ({isSidebarOpen}) => {
+const colorsMap = {
+  purple: { text: '#6b21a8', bg: '#faf5ff', iconBg: '#6b21a8', iconText: '#fff' },
+  blue: { text: '#2563eb', bg: '#eff6ff', iconBg: '#2563eb', iconText: '#fff' },
+  red: { text: '#b91c1c', bg: '#fee2e2', iconBg: '#b91c1c', iconText: '#fff' },
+  green: { text: '#15803d', bg: '#dcfce7', iconBg: '#15803d', iconText: '#fff' },
+};
+const Sidebar = ({ isSidebarOpen, highlightColor = 'blue' }) => {
   const [openDropdowns, setOpenDropdowns] = useState({});
   const toggleDropdown = (id) => {
-    setOpenDropdowns(prev => ({ ...prev, [id]: !prev[id] }));
+    setOpenDropdowns((prev) => ({ ...prev, [id]: !prev[id] }));
   };
-  //if(!isSidebarOpen) return null;
+  const activeColors = colorsMap[highlightColor] || colorsMap.purple;
   const navConfig = [
     {
       id: 'dashboard',
@@ -38,8 +42,8 @@ const Sidebar = ({isSidebarOpen}) => {
       name: 'Products',
       icon: CubeIcon,
       items: [
-        { name: 'Sample Option 1', path: '/products/sample1' },
-        { name: 'Sample Option 2', path: '/products/sample2' },
+        { name: 'Listing', path: '/products/sample1' },
+        { name: 'Add/Edit Product', path: '/products/sample2' },
       ],
     },
     {
@@ -48,8 +52,8 @@ const Sidebar = ({isSidebarOpen}) => {
       name: 'Categories',
       icon: Squares2X2Icon,
       items: [
-        { name: 'Sample Option A', path: '/categories/sample1' },
-        { name: 'Sample Option B', path: '/categories/sample2' },
+        { name: 'Listing', path: '/categories/sample1' },
+        { name: 'Add/Edit Category', path: '/categories/sample2' },
       ],
     },
     {
@@ -60,11 +64,14 @@ const Sidebar = ({isSidebarOpen}) => {
       icon: UserGroupIcon,
     },
   ];
-
   return (
-    <div className="w-56 bg-white h-screen px-4 py-4 flex flex-col border-r">
+    <div
+      className={`
+        ${isSidebarOpen ? 'w-56 block' : 'w-16 hidden md:block'}
+        bg-white h-screen px-2 py-4 flex flex-col border-r transition-all duration-300 overflow-hidden
+      `}
+    >
       <nav className="flex flex-col gap-2 mt-2">
-
         {navConfig.map((item) => {
           if (item.type === 'link') {
             return (
@@ -72,27 +79,41 @@ const Sidebar = ({isSidebarOpen}) => {
                 key={item.id}
                 to={item.path}
                 end
-                className={({ isActive }) =>
-                  `flex items-center gap-3 rounded-md px-2.5 py-2 text-base transition font-medium
-                  ${isActive ? 'text-purple-700 bg-purple-50 font-semibold' : 'hover:bg-gray-100 text-gray-500'}`
-                }
+                className="flex items-center gap-3 rounded-md px-2.5 py-2 text-base transition font-medium"
               >
-                {({ isActive }) => (
-                  <>
-                    <div
-                      className={`p-2 rounded-full transition
-                      ${isActive ? 'bg-purple-600 text-white' : 'text-gray-400'}`}
-                    >
-                      <item.icon className="w-5 h-5" />
-                    </div>
-                    <span>{item.name}</span>
-                    {item.badge && (
-                      <span className="ml-auto bg-green-500 text-xs font-bold text-white px-2 py-0.5 rounded-full flex items-center">
-                        {item.badge}
-                      </span>
-                    )}
-                  </>
-                )}
+                {({ isActive }) => {
+                  const iconStyle = isActive
+                    ? { backgroundColor: activeColors.iconBg, color: activeColors.iconText }
+                    : { color: '#9ca3af' };
+                  const textStyle = isActive
+                    ? {
+                        color: activeColors.text,
+                        fontWeight: '600',
+                        backgroundColor: activeColors.bg,
+                        borderRadius: '0.375rem',
+                        padding: '0.375rem 0.625rem',
+                        flexGrow: 1,
+                      }
+                    : { color: '#6b7280', flexGrow: 1 };
+
+                  return (
+                    <>
+                      <div
+                        className="p-2 rounded-full transition"
+                        style={iconStyle}
+                        title={!isSidebarOpen ? item.name : ''}
+                      >
+                        <item.icon className="w-5 h-5" />
+                      </div>
+                      {isSidebarOpen && <span style={textStyle}>{item.name}</span>}
+                      {isSidebarOpen && item.badge && (
+                        <span className="ml-auto bg-green-500 text-xs font-bold text-white px-2 py-0.5 rounded-full flex items-center">
+                          {item.badge}
+                        </span>
+                      )}
+                    </>
+                  );
+                }}
               </NavLink>
             );
           } else if (item.type === 'dropdown') {
@@ -104,14 +125,13 @@ const Sidebar = ({isSidebarOpen}) => {
                 items={item.items}
                 isOpen={!!openDropdowns[item.id]}
                 toggleOpen={() => toggleDropdown(item.id)}
-                activePaths={item.items.map(subItem => subItem.path)}
+                isSidebarOpen={isSidebarOpen}
+                activeColors={activeColors}
               />
             );
           }
-
-          return null; 
+          return null;
         })}
-
       </nav>
     </div>
   );
