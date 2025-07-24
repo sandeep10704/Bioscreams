@@ -3,7 +3,7 @@ import React from 'react'
 const ProductFormLayout = () => {
   return (
     <div>
-      gyihi
+      ProductFormLayout
     </div>
   )
 }
