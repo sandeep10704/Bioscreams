@@ -12,7 +12,7 @@ const Layout = () => {
         <Sidebar />
         <main className="flex-grow p-6 mt-16"> {/* mt-16 leaves space if Navbar is fixed */}
           {/* You can remove mt-16 if Navbar is not fixed */}
-          <p>hiii</p>
+          <p className='text-red-300'>hiii</p>
           <Outlet />
         </main>
       </div>

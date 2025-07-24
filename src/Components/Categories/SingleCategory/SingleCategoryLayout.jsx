@@ -1,6 +1,6 @@
 import React from 'react'
 
-const lay = () => {
+const SingleCategoryLayout = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const lay = () => {
   )
 }
 
-export default lay
+export default SingleCategoryLayout
