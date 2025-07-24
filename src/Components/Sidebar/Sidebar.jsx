@@ -15,7 +15,7 @@ const Sidebar = () => (
   >
     <Toolbar />
     <List>
-      <Box>hii</Box>
+      <Box>hello</Box>
       <ListItem button component={Link} to="/">
         <ListItemText primary="Dashboard" />
       </ListItem>
