@@ -1,7 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from "react";
 import { FiMenu, FiSearch } from "react-icons/fi";
 import { FaRegMoon } from "react-icons/fa";
 import { IoMdFlame } from "react-icons/io";
+import { UserCircleIcon } from "@heroicons/react/24/outline";
 
 const Navbar = ({ toggleSidebar, projectName, logoImage }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -20,15 +21,12 @@ const Navbar = ({ toggleSidebar, projectName, logoImage }) => {
   return (
     <nav className="bg-[#663FFA] text-white px-4 py-4 flex items-center justify-between w-full z-50 shadow-md">
       <div className="flex items-center gap-20">
-          <div className="flex items-center gap-2 font-bold text-lg">
+        <div className="flex items-center gap-2 font-bold text-lg">
           {/* <img src={logoImage} alt="Logo" className="w-8 h-8 rounded-full" /> */}
           <span>{projectName}</span>
         </div>
         <div className="flex items-center gap-2">
-          <FiMenu
-            className="text-2xl cursor-pointer"
-            onClick={toggleSidebar}
-          />
+          <FiMenu className="text-2xl cursor-pointer" onClick={toggleSidebar} />
           <div className="relative">
             <FiSearch className="absolute top-2.5 left-2 text-white" />
             <input
@@ -39,7 +37,7 @@ const Navbar = ({ toggleSidebar, projectName, logoImage }) => {
           </div>
         </div>
       </div>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-6 px-2">
         <FaRegMoon className="text-xl cursor-pointer" />
         <div className="relative" ref={dropdownRef}>
           <div
@@ -56,15 +54,33 @@ const Navbar = ({ toggleSidebar, projectName, logoImage }) => {
           {dropdownOpen && (
             <div className="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg z-50">
               <ul className="py-1">
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">My Account</li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Pricing</li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Help</li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Photos</li>
+                {/* <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer"><UserCircleIcon />My Account</li> */}
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2">
+                  <UserCircleIcon className="h-5 w-5 text-gray-600" />
+                  My Account
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  Pricing
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  Help
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  Photos
+                </li>
                 <hr className="my-1" />
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Lock Screen</li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Logout</li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Login</li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Sign Up</li>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  Lock Screen
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  Logout
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  Login
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  Sign Up
+                </li>
               </ul>
             </div>
           )}

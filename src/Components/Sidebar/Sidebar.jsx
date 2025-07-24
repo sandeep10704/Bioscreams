@@ -19,7 +19,9 @@ const Sidebar = ({ isSidebarOpen, highlightColor = 'blue' }) => {
   const toggleDropdown = (id) => {
     setOpenDropdowns((prev) => ({ ...prev, [id]: !prev[id] }));
   };
+
   const activeColors = colorsMap[highlightColor] || colorsMap.purple;
+
   const navConfig = [
     {
       id: 'dashboard',

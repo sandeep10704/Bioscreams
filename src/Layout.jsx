@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React,{useState} from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Footer from './Components/Footer/Footer';
+
+
+
 
 const Layout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -28,6 +31,9 @@ const Layout = () => {
         </main>
       </div>
     </div>
+    
+
+    
   );
 };
 
