@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Dashboard = () => {
+const comp = () => {
   return (
     <div>
-      deys
+      iajlo
     </div>
   )
 }
 
-export default Dashboard
+export default comp

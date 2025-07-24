@@ -3,7 +3,7 @@ import React from 'react'
 const comp = () => {
   return (
     <div>
-      ckuh
+      jhik
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 
-const CategoriesLayout = () => {
+const CustomerLayout = () => {
   return (
     <div>
       <Outlet />
@@ -9,4 +9,5 @@ const CategoriesLayout = () => {
   )
 }
 
-export default CategoriesLayout
+export default CustomerLayout
+
