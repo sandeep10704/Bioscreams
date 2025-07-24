@@ -1,11 +1,37 @@
-import React from 'react'
+import React from 'react';
+import { Drawer, List, ListItem, ListItemText, Toolbar } from '@mui/material';
+import { Link } from 'react-router-dom';
 
-const Sidebar = () => {
-  return (
-    <div>
-      eihdu
-    </div>
-  )
-}
+const drawerWidth = 200;
 
-export default Sidebar
+const Sidebar = () => (
+  <Drawer
+    variant="permanent"
+    sx={{
+      width: drawerWidth,
+      flexShrink: 0,
+      [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
+    }}
+  >
+    <Toolbar />
+    <List>
+      <ListItem button component={Link} to="/">
+        <ListItemText primary="Dashboard" />
+      </ListItem>
+      <ListItem button component={Link} to="/orders">
+        <ListItemText primary="Orders" />
+      </ListItem>
+      <ListItem button component={Link} to="/products">
+        <ListItemText primary="Products" />
+      </ListItem>
+      <ListItem button component={Link} to="/categories">
+        <ListItemText primary="Categories" />
+      </ListItem>
+      <ListItem button component={Link} to="/customers">
+        <ListItemText primary="Customers" />
+      </ListItem>
+    </List>
+  </Drawer>
+);
+
+export default Sidebar;
