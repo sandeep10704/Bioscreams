@@ -19,7 +19,9 @@ const Signup = ({ signupImage, buttonColor }) => {
 
   return (
     <div className="min-h-screen  flex items-center justify-center py-2">
-      <div className="w-full max-w-4xl bg-white rounded-lg shadow-lg flex flex-col md:flex-row overflow-hidden">
+     <div className="w-full max-w-4xl bg-white rounded-lg border border-gray-200 shadow-2xl flex flex-col md:flex-row overflow-hidden">
+
+
 
 
         <div className="hidden md:flex w-1/2 items-center justify-center p-4">
@@ -79,7 +81,7 @@ const Signup = ({ signupImage, buttonColor }) => {
           </button>
 
           <p className="text-center mt-3 text-sm">
-            <Link to="/login" className="text-green-700 hover:underline">
+            <Link to="/Login" className="text-green-700 hover:underline">
               Already have an account? Log in
             </Link>
           </p>
