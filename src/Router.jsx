@@ -2,11 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './Layout';
-import Dashboard from './Pages/Dashboard';
-import Orders from './Pages/Orders';
+
 import Products from './Pages/Products';
 import CategoriesLayout from './Components/Categories/CategoriesLayout';
-import Customers from './Pages/Customers';
+
 import OrderListLayout from './Components/Orders/OrderList/OrderListLayout'
 import OrderLayout from './Components/Orders/OrderLayout'
 import SingleOrderLayout from './Components/Orders/SingleOrder/SingleOrderLayout';
@@ -18,6 +17,7 @@ import CustomerFormLayout from "./Components/Customers/CustomerForm/CustomerForm
 import SingleCustomerLayout from "./Components/Customers/SingleCustomer/SingelCustomerLayout"
 import CustomerListLayout from './Components/Customers/CustomerList/CustomerListLayout';
 import CustomerLayout from "./Components/Customers/CustomerLayout"
+import DashboardLayout from './Components/Dashboard/DashboardLayout';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true, 
-        element: <Dashboard />,
+        element: <DashboardLayout />,
       },
       {
         path: 'orders',
