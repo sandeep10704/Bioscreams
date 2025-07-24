@@ -1,11 +1,11 @@
 import React from 'react'
 
-const lay = () => {
+const comp = () => {
   return (
     <div>
-      eiwjdsoi
+      jhik
     </div>
   )
 }
 
-export default lay
+export default comp
