@@ -32,55 +32,55 @@ const DashboardLayout = () => {
   ];
 
   return (
-    <div className='w-fit'>
+    <div className='w-full'>
 
-      <div className="bg-gray-50 min-h-screen flex items-center justify-center">
-        <div className="grid grid-cols-1 lg:grid-cols-4  w-full ">
+  <div className="bg-gray-50  flex items-center justify-center">
+    <div className="grid grid-cols-1 lg:grid-cols-4 gap-2 w-fit">
 
-          {/* Left side: 4 statistic cards in 2x2 grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 lg:col-span-2">
-            <CurveChartCard
-              Icon={FaDollarSign}
-              title="TOTAL REVENUE"
-              value="$35,428.09"
-              data={chartData}
-            />
-            <LineChartCard
-              Icon={FaUtensils}
-              title="TOTAL ORDERS"
-              value="4526"
-              data={customerData}
-            />
-            <LineChartCard
-              Icon={FaUserFriends}
-              title="TOTAL CUSTOMERS"
-              value="5736"
-              data={customerData}
-            />
-            <CurveChartCard
-              Icon={FaCalendarTimes}
-              title="CANCELLED ORDERS"
-              value="1310"
-              data={chartData}
-            />
-          </div>
-
-          {/* Right side: Revenue Summary */}
-          <div className="col-span-2 w-auto">
-            <RevenueSummaryCard
-              data={chartData2}
-              currentRevenue="$56,184.22"
-              previousRevenue="$600,765.00"
-              percentageChange="31.08%"
-              description="Restaurant has successfully completed a substantial number of orders, totaling 4,500 orders."
-            />
-          </div>
-        </div>
+      {/* Left side: 4 statistic cards in 2x2 grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 lg:col-span-2">
+        <CurveChartCard
+          Icon={FaDollarSign}
+          title="TOTAL REVENUE"
+          value="$35,428.09"
+          data={chartData}
+        />
+        <LineChartCard
+          Icon={FaUtensils}
+          title="TOTAL ORDERS"
+          value="4526"
+          data={customerData}
+        />
+        <LineChartCard
+          Icon={FaUserFriends}
+          title="TOTAL CUSTOMERS"
+          value="5736"
+          data={customerData}
+        />
+        <CurveChartCard
+          Icon={FaCalendarTimes}
+          title="CANCELLED ORDERS"
+          value="1310"
+          data={chartData}
+        />
       </div>
 
-
+      {/* Right side: Revenue Summary */}
+      <div className="col-span-2 w-auto">
+        <RevenueSummaryCard
+          data={chartData2}
+          currentRevenue="$56,184.22"
+          previousRevenue="$600,765.00"
+          percentageChange="31.08%"
+          description="Restaurant has successfully completed a substantial number of orders, totaling 4,500 orders."
+        />
+      </div>
 
     </div>
+  </div>
+
+</div>
+
   )
 }
 
