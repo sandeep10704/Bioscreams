@@ -8,9 +8,6 @@ const OrderLayout = () => {
   return (
     <div>
     <Outlet />
-        <OrderFormLayout/>
-        <OrderListLayout/>
-        <SingleOrderLayout/>
     </div>
   )
 }

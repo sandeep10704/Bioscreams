@@ -24,7 +24,6 @@ const Table = () => {
           { name: "Cheeseburger", qty: 2, price: "$10.00" },
         ],
         "Total Price": "$36.00",
-        // "Payment Method": "Online UPI",
         "Order Date & Time": "15-02-2024, 04:27 pm",
         Address: "44 Hide A Way, Orlando.",
         "Delivery Status": "Ready To Pick",
@@ -39,7 +38,6 @@ const Table = () => {
           { name: "BBQ Chicken Wings", qty: 3, price: "$18.00" },
         ],
         "Total Price": "$98.00",
-        // "Payment Method": "COD",
         "Order Date & Time": "19-11-2024, 03:45 pm",
         Address: "Denver Avenue, Edgemt, CA 92",
         "Delivery Status": "Out Of Delivery",
@@ -50,7 +48,6 @@ const Table = () => {
         Customer: "Laura W. Gibb",
         items: [{ name: "Caesar Salad", qty: 1, price: "$13.00" }],
         "Total Price": "$13.00",
-        // "Payment Method": "Online UPI",
         "Order Date & Time": "12-03-2026, 11:15 am",
         Address: "Goldie Lane, Cincinnati, OH",
         "Delivery Status": "Delivered",
@@ -81,7 +78,7 @@ const Table = () => {
       <h2 className="text-xl font-semibold mb-6">Orders Summary</h2>
 
       {/* Table Header */}
-      <div className="grid grid-cols-[repeat(10,minmax(120px,1fr))_40px] bg-gray-100 text-sm text-gray-600 font-semibold rounded-t-md p-4 gap-4">
+      <div className="grid grid-cols-[100px_150px_1fr_60px_100px_100px_180px_220px_140px_30px] bg-gray-100 text-sm text-gray-600 font-semibold rounded-t-md p-4 gap-4">
         {tableData.columns.map((col, idx) => (
           <div key={idx} className="truncate">
             {col}
@@ -94,7 +91,7 @@ const Table = () => {
       {tableData.itemsRow.map((row) => (
         <div
           key={row.id}
-          className="grid grid-cols-[repeat(10,minmax(110px,1fr))_40px] bg-white p-4 rounded-lg shadow-sm my-2 text-sm gap-4"
+          className="grid grid-cols-[100px_150px_1fr_60px_100px_100px_180px_220px_140px_30px] bg-white p-4 rounded-lg shadow-sm my-2 text-sm gap-4"
         >
           <div>{row["Order No."]}</div>
           <div className="text-blue-600 font-medium cursor-pointer">
@@ -125,7 +122,6 @@ const Table = () => {
           </div>
 
           <div>{row["Total Price"]}</div>
-          {/* <div>{row["Payment Method"]}</div> */}
           <div className="break-words">{row["Order Date & Time"]}</div>
           <div className="break-words">{row.Address}</div>
 
