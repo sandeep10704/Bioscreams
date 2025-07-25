@@ -23,7 +23,6 @@ const Layout = () => {
 
         <main className="flex-grow flex flex-col mt-16 p-2">
           <div className="flex-grow">
-            <p className="text-red-300">hiii</p>
             <Outlet />
           </div>
 

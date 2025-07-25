@@ -3,10 +3,12 @@ import { FiMenu, FiSearch } from "react-icons/fi";
 import { FaRegMoon } from "react-icons/fa";
 import { IoMdFlame } from "react-icons/io";
 import { UserCircleIcon } from "@heroicons/react/24/outline";
+import { useNavigate } from "react-router-dom";
 
-const Navbar = ({ toggleSidebar, projectName, logoImage }) => {
+const Navbar = ({ toggleSidebar, projectName, logoImage, navColor }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef();
+  const navigate=useNavigate();
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -55,7 +57,7 @@ const Navbar = ({ toggleSidebar, projectName, logoImage }) => {
             <div className="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg z-50">
               <ul className="py-1">
                 {/* <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer"><UserCircleIcon />My Account</li> */}
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2">
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"  onClick={() => navigate('/')}>
                   <UserCircleIcon className="h-5 w-5 text-gray-600" />
                   My Account
                 </li>
