@@ -57,30 +57,37 @@ const Navbar = ({ toggleSidebar, projectName, logoImage, navColor }) => {
             <div className="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg z-50">
               <ul className="py-1">
                 {/* <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer"><UserCircleIcon />My Account</li> */}
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"  onClick={() => navigate('/')}>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"  >
                   <UserCircleIcon className="h-5 w-5 text-gray-600" />
                   My Account
                 </li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                  Pricing
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"  >
+                  <UserCircleIcon className="h-5 w-5 text-gray-600" />
+                 Pricing
                 </li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                  Help
+                 <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"  >
+                  <UserCircleIcon className="h-5 w-5 text-gray-600" />
+                  List
                 </li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                 <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"  >
+                  <UserCircleIcon className="h-5 w-5 text-gray-600" />
                   Photos
                 </li>
                 <hr className="my-1" />
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"  >
+                  <UserCircleIcon className="h-5 w-5 text-gray-600" />
                   Lock Screen
                 </li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                  Logout
+                 <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"  >
+                  <UserCircleIcon className="h-5 w-5 text-gray-600" />
+                 Logout
                 </li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2" onClick={() => navigate('/login')} >
+                  <UserCircleIcon className="h-5 w-5 text-gray-600" />
                   Login
                 </li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                 <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2" onClick={()=>navigate("/Signup")} >
+                  <UserCircleIcon className="h-5 w-5 text-gray-600" />
                   Sign Up
                 </li>
               </ul>
