@@ -17,7 +17,7 @@ const RevenueSummaryCard = ({ data, currentRevenue, previousRevenue, percentageC
   const totalValue = data && data.length > 0 ? data.reduce((sum, item) => sum + item.value, 0) : 0;
 
   return (
-    <div className="bg-white rounded-xl shadow-md p-6 pb-8 w-full max-w-2xl mx-auto">
+    <div className="bg-white rounded-xl shadow-md p-2 pb-8 w-full max-w-2xl mx-auto">
       {/* Header */}
       <div className="flex justify-between items-center mb-10">
         <h2 className="text-lg font-semibold text-gray-700">REVENUE SUMMARY</h2>
@@ -67,7 +67,7 @@ const RevenueSummaryCard = ({ data, currentRevenue, previousRevenue, percentageC
         </div>
 
         {/* Revenue Details - Left-aligned text */}
-        <div className="ml-8">
+        <div className="ml-6">
           <div className="flex items-baseline gap-3">
             <div className="text-2xl font-bold text-indigo-600">{currentRevenue}</div>
             <div className="text-sx text-green-500 bg-green-100 px-2 py-2 rounded-full font-semibold flex items-center">
