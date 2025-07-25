@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
-import { FcGoogle } from "react-icons/fc";
-import { FaFacebookF, FaGithub } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 
 const Login = ({ loginImage, buttonColor }) => {
@@ -82,27 +81,19 @@ const Login = ({ loginImage, buttonColor }) => {
           
           <div className="flex justify-center gap-4">
             <a href="https://www.google.com" target="_blank" rel="noreferrer">
-              <FcGoogle size={28} />
+              {/* <FcGoogle size={28} /> */}
             </a>
             <a href="https://www.facebook.com/login" target="_blank" rel="noreferrer">
-              <FaFacebookF size={24} color="#1877F2" />
+              {/* <FaFacebookF size={24} color="#1877F2" /> */}
             </a>
             <a href="https://github.com/login" target="_blank" rel="noreferrer">
-              <FaGithub size={24} color="#333" />
+              {/* <FaGithub size={24} color="#333" /> */}
             </a>
           </div>
         </div>
       </div>
 
-      
-      {snack.open && (
-  <div
-    className="fixed bottom-5 px-4 py-2 rounded text-white transition"
-    style={{ backgroundColor: "#3BB77E" }} // Directly set the color
-  >
-    {snack.message}
-  </div>
-)}
+     
     </div>
   );
 };

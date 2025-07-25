@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
-import { FcGoogle } from "react-icons/fc";
-import { FaFacebookF, FaGithub } from "react-icons/fa";
+// import { FcGoogle } from "react-icons/fc";
+// import { FaFacebookF, FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Images from "../Assets/Img/images";
 
@@ -94,31 +94,23 @@ const Signup = ({ signupImage, buttonColor }) => {
 
           <div className="flex justify-center gap-4">
             <a href="https://www.google.com" target="_blank" rel="noreferrer">
-              <FcGoogle size={28} />
+              {/* <FcGoogle size={28} /> */}
             </a>
             <a
               href="https://www.facebook.com/login"
               target="_blank"
               rel="noreferrer"
             >
-              <FaFacebookF size={24} color="#1877F2" />
+              {/* <FaFacebookF size={24} color="#1877F2" /> */}
             </a>
             <a href="https://github.com/login" target="_blank" rel="noreferrer">
-              <FaGithub size={24} color="#333" />
+              {/* <FaGithub size={24} color="#333" /> */}
             </a>
           </div>
         </div>
       </div>
 
-      {snack.open && (
-        <div
-          className={`fixed bottom-5 px-4 py-2 rounded text-white ${
-            snack.severity === "success" ? "bg-green-500" : "bg-red-500"
-          }`}
-        >
-          {snack.message}
-        </div>
-      )}
+      
     </div>
   );
 };
