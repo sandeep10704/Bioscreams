@@ -32,7 +32,7 @@ const DashboardLayout = () => {
   ];
 
   return (
-    <div className='w-full'>
+    <div className='w-full lg:max-w-[1200px] mx-auto'>
 
   <div className="bg-gray-50  flex items-center justify-center">
     <div className="grid grid-cols-1 lg:grid-cols-4 gap-2 w-fit">
