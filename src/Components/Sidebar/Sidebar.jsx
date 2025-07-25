@@ -45,7 +45,7 @@ const Sidebar = ({ isSidebarOpen, highlightColor = 'blue' }) => {
       icon: CubeIcon,
       items: [
         { name: 'Listing', path: '/products/sample1' },
-        { name: 'Add/Edit Product', path: '/products/sample2' },
+        { name: 'Add/Edit Product', path: '/products/form' },
       ],
     },
     {
@@ -55,7 +55,7 @@ const Sidebar = ({ isSidebarOpen, highlightColor = 'blue' }) => {
       icon: Squares2X2Icon,
       items: [
         { name: 'Listing', path: '/categories/sample1' },
-        { name: 'Add/Edit Category', path: '/categories/sample2' },
+        { name: 'Add/Edit Category', path: '/categories/form' },
       ],
     },
     {
