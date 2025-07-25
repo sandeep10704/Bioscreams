@@ -1,9 +1,10 @@
 import React from 'react'
+import Table from "../../Common/Table"
 
 const CustomerListLayout = () => {
   return (
     <div>
-      customer list Layout
+      <Table />
     </div>
   )
 }
