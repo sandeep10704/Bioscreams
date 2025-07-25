@@ -35,7 +35,7 @@ const RevenueSummaryCard = ({ data, currentRevenue, previousRevenue, percentageC
       <div className="flex flex-col md:flex-row items-center justify-start">
 
         {/* Radial Bar Chart */}
-        <div className="relative w-80 h-80 flex-shrink-0">
+        <div className="relative w-70 h-70 flex-shrink-0">
           <ResponsiveContainer width="100%" height="100%">
             <RadialBarChart
               innerRadius="70%"
@@ -62,23 +62,23 @@ const RevenueSummaryCard = ({ data, currentRevenue, previousRevenue, percentageC
           </ResponsiveContainer>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
             <div className="text-sm font-semibold text-gray-500">Archived</div>
-            <div className="text-4xl font-bold text-gray-800">{totalValue}</div>
+            <div className="text-3xl font-bold text-gray-800">{totalValue}</div>
           </div>
         </div>
 
         {/* Revenue Details - Left-aligned text */}
         <div className="ml-8">
           <div className="flex items-baseline gap-3">
-            <div className="text-3xl font-bold text-indigo-600">{currentRevenue}</div>
-            <div className="text-sm text-green-500 bg-green-100 px-2 py-2 rounded-full font-semibold flex items-center">
+            <div className="text-2xl font-bold text-indigo-600">{currentRevenue}</div>
+            <div className="text-sx text-green-500 bg-green-100 px-2 py-2 rounded-full font-semibold flex items-center">
               <AiOutlineArrowUp className="mr-1" />
               {percentageChange}
             </div>
           </div>
-          <div className="text-gray-500 text-sm mt-1">From {previousRevenue}</div>
+          <div className="text-gray-500 text-xs mt-1">From {previousRevenue}</div>
           <div className="text-gray-400 text-xl my-1">***</div>
-          <div className="text-gray-600 text-sm max-w-xs">{description}</div>
-          <button className="bg-gray-800 text-white py-2 px-4 rounded-md mt-8 hover:bg-gray-700 focus:outline-none">
+          <div className="text-gray-600 text-xs max-w-xs">{description}</div>
+          <button className="bg-gray-800 text-white py-2 px-2 rounded-md mt-8 hover:bg-gray-700 focus:outline-none">
             View Reports
           </button>
         </div>

@@ -7,7 +7,7 @@ const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     return (
       <div className="p-2 bg-white rounded-md shadow-lg border border-gray-200">
-        <p className="text-sm font-bold text-gray-700">{payload[0].value}</p>
+        <p className="text-xs font-bold text-gray-700">{payload[0].value}</p>
       </div>
     );
   }
@@ -29,11 +29,11 @@ const LineChartCard = ({ Icon, title, value, data }) => {
       {/* Header Section */}
       <div className="flex justify-between items-start">
         <div>
-          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
+          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
             {title}
           </p>
           {/* Note: The value color is changed to match the new design */}
-          <p className="text-3xl font-bold text-slate-800 mt-1">
+          <p className="text-2xl font-bold text-slate-800 mt-1">
             {value}
           </p>
         </div>
@@ -43,7 +43,7 @@ const LineChartCard = ({ Icon, title, value, data }) => {
       </div>
 
       {/* Chart Section */}
-      <div className="mt-4 h-24">
+      <div className="mt-4 h-22">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={data}
