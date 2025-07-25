@@ -24,7 +24,7 @@ const CustomTooltip = ({ active, payload }) => {
  */
 const RevenueChartCard = ({ Icon, title, value, data }) => {
   return (
-    <div className="bg-white p-6 rounded-xl shadow-md w-full max-w-sm">
+    <div className="bg-white p-4 rounded-xl shadow-md w-full max-w-sm">
       {/* Header Section */}
       <div className="flex justify-between items-start">
         <div>
